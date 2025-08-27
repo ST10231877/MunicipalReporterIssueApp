@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using System.Drawing;
 
 namespace MunicipalReporterAppProg.Forms
 {
@@ -63,126 +64,158 @@ namespace MunicipalReporterAppProg.Forms
             this.colCategory = new ColumnHeader();
             this.colStatus = new ColumnHeader();
             this.SuspendLayout();
-            // 
-            // Form
-            // 
+
             this.AutoScaleMode = AutoScaleMode.Font;
             this.Text = "Municipal Reporter — Report Issue";
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.MinimumSize = new System.Drawing.Size(920, 600);
-            // 
-            // lblHeader
-            // 
-            this.lblHeader.Text = "Report an Issue";
+            this.MinimumSize = new System.Drawing.Size(1000, 650);
+            this.BackColor = Color.FromArgb(248, 250, 252);
+            this.Font = new Font("Segoe UI", 9F);
+
+            this.lblHeader.Text = "📝 Report an Issue";
             this.lblHeader.AutoSize = true;
-            this.lblHeader.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.lblHeader.Location = new System.Drawing.Point(18, 18);
-            // 
-            // lblTitle / txtTitle
-            // 
-            this.lblTitle.Text = "Title:";
+            this.lblHeader.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.lblHeader.ForeColor = Color.FromArgb(30, 58, 138);
+            this.lblHeader.Location = new System.Drawing.Point(25, 25);
+
+            this.lblTitle.Text = "Issue Title *";
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.Location = new System.Drawing.Point(18, 70);
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.ForeColor = Color.FromArgb(55, 65, 81);
+            this.lblTitle.Location = new System.Drawing.Point(25, 80);
 
-            this.txtTitle.Location = new System.Drawing.Point(18, 92);
-            this.txtTitle.Width = 360;
-            // 
-            // lblLocation / txtLocation
-            // 
-            this.lblLocation.Text = "Location:";
+            this.txtTitle.Location = new System.Drawing.Point(25, 105);
+            this.txtTitle.Width = 380;
+            this.txtTitle.Height = 35;
+            this.txtTitle.Font = new Font("Segoe UI", 10F);
+            this.txtTitle.BorderStyle = BorderStyle.FixedSingle;
+            this.txtTitle.BackColor = Color.White;
+
+            this.lblLocation.Text = "Location *";
             this.lblLocation.AutoSize = true;
-            this.lblLocation.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblLocation.Location = new System.Drawing.Point(18, 130);
+            this.lblLocation.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblLocation.ForeColor = Color.FromArgb(55, 65, 81);
+            this.lblLocation.Location = new System.Drawing.Point(25, 150);
 
-            this.txtLocation.Location = new System.Drawing.Point(18, 152);
-            this.txtLocation.Width = 360;
-            // 
-            // lblCategory / cboCategory
-            // 
-            this.lblCategory.Text = "Category:";
+            this.txtLocation.Location = new System.Drawing.Point(25, 175);
+            this.txtLocation.Width = 380;
+            this.txtLocation.Height = 35;
+            this.txtLocation.Font = new Font("Segoe UI", 10F);
+            this.txtLocation.BorderStyle = BorderStyle.FixedSingle;
+            this.txtLocation.BackColor = Color.White;
+
+            this.lblCategory.Text = "Category *";
             this.lblCategory.AutoSize = true;
-            this.lblCategory.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblCategory.Location = new System.Drawing.Point(18, 190);
+            this.lblCategory.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblCategory.ForeColor = Color.FromArgb(55, 65, 81);
+            this.lblCategory.Location = new System.Drawing.Point(25, 220);
 
-            this.cboCategory.Location = new System.Drawing.Point(18, 212);
-            this.cboCategory.Width = 360;
+            this.cboCategory.Location = new System.Drawing.Point(25, 245);
+            this.cboCategory.Width = 380;
+            this.cboCategory.Height = 35;
+            this.cboCategory.Font = new Font("Segoe UI", 10F);
             this.cboCategory.DropDownStyle = ComboBoxStyle.DropDownList;
-            // 
-            // lblDesc / rtbDescription
-            // 
-            this.lblDesc.Text = "Description:";
+            this.cboCategory.BackColor = Color.White;
+
+            this.lblDesc.Text = "Description * (minimum 10 characters)";
             this.lblDesc.AutoSize = true;
-            this.lblDesc.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblDesc.Location = new System.Drawing.Point(18, 250);
+            this.lblDesc.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblDesc.ForeColor = Color.FromArgb(55, 65, 81);
+            this.lblDesc.Location = new System.Drawing.Point(25, 290);
 
-            this.rtbDescription.Location = new System.Drawing.Point(18, 272);
-            this.rtbDescription.Width = 360;
+            this.rtbDescription.Location = new System.Drawing.Point(25, 315);
+            this.rtbDescription.Width = 380;
             this.rtbDescription.Height = 120;
-            // 
-            // lblAttach / txtAttachment / btnBrowse
-            // 
-            this.lblAttach.Text = "Media Attachment (optional):";
+            this.rtbDescription.Font = new Font("Segoe UI", 10F);
+            this.rtbDescription.BorderStyle = BorderStyle.FixedSingle;
+            this.rtbDescription.BackColor = Color.White;
+
+            this.lblAttach.Text = "📎 Media Attachment (optional)";
             this.lblAttach.AutoSize = true;
-            this.lblAttach.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblAttach.Location = new System.Drawing.Point(18, 402);
+            this.lblAttach.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblAttach.ForeColor = Color.FromArgb(55, 65, 81);
+            this.lblAttach.Location = new System.Drawing.Point(25, 450);
 
-            this.txtAttachment.Location = new System.Drawing.Point(18, 424);
+            this.txtAttachment.Location = new System.Drawing.Point(25, 475);
             this.txtAttachment.Width = 300;
+            this.txtAttachment.Height = 35;
+            this.txtAttachment.Font = new Font("Segoe UI", 9F);
             this.txtAttachment.ReadOnly = true;
+            this.txtAttachment.BorderStyle = BorderStyle.FixedSingle;
+            this.txtAttachment.BackColor = Color.FromArgb(249, 250, 251);
 
-            this.btnBrowse.Text = "Browse…";
-            this.btnBrowse.Location = new System.Drawing.Point(326, 422);
-            this.btnBrowse.Width = 70;
+            this.btnBrowse.Text = "Browse...";
+            this.btnBrowse.Location = new System.Drawing.Point(335, 473);
+            this.btnBrowse.Size = new Size(70, 35);
+            this.btnBrowse.Font = new Font("Segoe UI", 9F);
+            this.btnBrowse.BackColor = Color.FromArgb(107, 114, 128);
+            this.btnBrowse.ForeColor = Color.White;
+            this.btnBrowse.FlatStyle = FlatStyle.Flat;
+            this.btnBrowse.FlatAppearance.BorderSize = 0;
+            this.btnBrowse.Cursor = Cursors.Hand;
             this.btnBrowse.Click += new System.EventHandler(this.BtnBrowse_Click);
-            // 
-            // btnSubmit / btnBack
-            // 
-            this.btnSubmit.Text = "Submit";
-            this.btnSubmit.Location = new System.Drawing.Point(18, 468);
-            this.btnSubmit.Size = new System.Drawing.Size(120, 34);
+
+            this.btnSubmit.Text = "✅ Submit Report";
+            this.btnSubmit.Location = new System.Drawing.Point(25, 530);
+            this.btnSubmit.Size = new System.Drawing.Size(140, 40);
+            this.btnSubmit.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            this.btnSubmit.BackColor = Color.FromArgb(34, 197, 94);
+            this.btnSubmit.ForeColor = Color.White;
+            this.btnSubmit.FlatStyle = FlatStyle.Flat;
+            this.btnSubmit.FlatAppearance.BorderSize = 0;
+            this.btnSubmit.FlatAppearance.MouseOverBackColor = Color.FromArgb(22, 163, 74);
+            this.btnSubmit.Cursor = Cursors.Hand;
             this.btnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
 
-            this.btnBack.Text = "Back to Main";
-            this.btnBack.Location = new System.Drawing.Point(150, 468);
-            this.btnBack.Size = new System.Drawing.Size(120, 34);
+            this.btnBack.Text = "← Back to Main";
+            this.btnBack.Location = new System.Drawing.Point(175, 530);
+            this.btnBack.Size = new System.Drawing.Size(130, 40);
+            this.btnBack.Font = new Font("Segoe UI", 10F);
+            this.btnBack.BackColor = Color.FromArgb(107, 114, 128);
+            this.btnBack.ForeColor = Color.White;
+            this.btnBack.FlatStyle = FlatStyle.Flat;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatAppearance.MouseOverBackColor = Color.FromArgb(75, 85, 99);
+            this.btnBack.Cursor = Cursors.Hand;
             this.btnBack.Click += new System.EventHandler(this.BtnBack_Click);
-            // 
-            // progress / lblEngage
-            // 
-            this.progress.Location = new System.Drawing.Point(18, 510);
-            this.progress.Width = 360;
-            this.progress.Height = 12;
+
+            this.progress.Location = new System.Drawing.Point(25, 580);
+            this.progress.Width = 380;
+            this.progress.Height = 8;
             this.progress.Style = ProgressBarStyle.Marquee;
             this.progress.MarqueeAnimationSpeed = 30;
             this.progress.Visible = false;
 
-            this.lblEngage.Text = "Ready to submit your report.";
+            this.lblEngage.Text = "Ready to submit your report";
             this.lblEngage.AutoSize = true;
-            this.lblEngage.Location = new System.Drawing.Point(18, 530);
-            // 
-            // Right panel list
-            // 
-            this.lblList.Text = "Recent Reports (this session)";
+            this.lblEngage.Font = new Font("Segoe UI", 9F);
+            this.lblEngage.ForeColor = Color.FromArgb(107, 114, 128);
+            this.lblEngage.Location = new System.Drawing.Point(25, 595);
+
+            this.lblList.Text = "📋 Recent Reports (this session)";
             this.lblList.AutoSize = true;
-            this.lblList.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblList.Location = new System.Drawing.Point(420, 70);
+            this.lblList.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblList.ForeColor = Color.FromArgb(55, 65, 81);
+            this.lblList.Location = new System.Drawing.Point(450, 80);
 
             this.lvIssues.View = View.Details;
-            this.lvIssues.Location = new System.Drawing.Point(420, 92);
-            this.lvIssues.Width = 460;
-            this.lvIssues.Height = 430;
+            this.lvIssues.Location = new System.Drawing.Point(450, 110);
+            this.lvIssues.Width = 520;
+            this.lvIssues.Height = 460;
             this.lvIssues.FullRowSelect = true;
             this.lvIssues.GridLines = true;
+            this.lvIssues.Font = new Font("Segoe UI", 9F);
+            this.lvIssues.BackColor = Color.White;
+            this.lvIssues.BorderStyle = BorderStyle.FixedSingle;
 
             this.colCreated.Text = "Created";
-            this.colCreated.Width = 120;
+            this.colCreated.Width = 130;
             this.colTitle.Text = "Title";
-            this.colTitle.Width = 160;
+            this.colTitle.Width = 180;
             this.colCategory.Text = "Category";
             this.colCategory.Width = 120;
             this.colStatus.Text = "Status";
-            this.colStatus.Width = 80;
+            this.colStatus.Width = 90;
 
             this.lvIssues.Columns.AddRange(new ColumnHeader[] {
                 this.colCreated, this.colTitle, this.colCategory, this.colStatus
