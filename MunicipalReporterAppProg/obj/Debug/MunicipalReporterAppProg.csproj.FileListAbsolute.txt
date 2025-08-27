@@ -1,0 +1,8 @@
+C:\Users\Naeem\source\repos\MunicipalReporterAppProg\bin\Debug\MunicipalReporterAppProg.exe.config
+C:\Users\Naeem\source\repos\MunicipalReporterAppProg\bin\Debug\MunicipalReporterAppProg.exe
+C:\Users\Naeem\source\repos\MunicipalReporterAppProg\bin\Debug\MunicipalReporterAppProg.pdb
+C:\Users\Naeem\source\repos\MunicipalReporterAppProg\obj\Debug\MunicipalReporterAppProg.Properties.Resources.resources
+C:\Users\Naeem\source\repos\MunicipalReporterAppProg\obj\Debug\MunicipalReporterAppProg.csproj.GenerateResource.cache
+C:\Users\Naeem\source\repos\MunicipalReporterAppProg\obj\Debug\MunicipalReporterAppProg.csproj.CoreCompileInputs.cache
+C:\Users\Naeem\source\repos\MunicipalReporterAppProg\obj\Debug\MunicipalReporterAppProg.exe
+C:\Users\Naeem\source\repos\MunicipalReporterAppProg\obj\Debug\MunicipalReporterAppProg.pdb
